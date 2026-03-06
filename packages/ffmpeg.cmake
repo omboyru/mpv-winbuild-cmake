@@ -6,7 +6,6 @@ ExternalProject_Add(ffmpeg
         bzip2
         lame
         lcms2
-        openssl
         libssh
         libsrt
         libass
@@ -92,10 +91,10 @@ ExternalProject_Add(ffmpeg
         ${ffmpeg_uavs3d_cmd}
         --enable-libxvid
         --enable-libzimg
-        --enable-openssl
+        --disable-openssl
         --enable-libxml2
         --enable-libmysofa
-        --enable-libssh
+        --disable-libssh
         --enable-libsrt
         --enable-libvpl
         --enable-libjxl
@@ -103,15 +102,12 @@ ExternalProject_Add(ffmpeg
         --enable-libshaderc
         --enable-libzvbi
         --enable-libaribcaption
-        ${ffmpeg_cuda}
         --enable-amf
         --enable-openal
         --enable-opengl
         --disable-doc
         --disable-ffplay
         --disable-ffprobe
-        --enable-vaapi
-        --disable-vdpau
         --disable-videotoolbox
         --disable-decoder=libaom_av1
         ${ffmpeg_lto}
